@@ -1,0 +1,24 @@
+<%= form_for(@article, html: {multipart: true}) do |form| %>
+    <ul class="list-group">
+        <% @article.errors.full_messages.each do |error| %>
+            <li class="list-group-item list-group-item-danger"><%= error %></li>
+        <% end %>
+    </ul>
+
+    <div class="row">
+        <%= form.label :title, class: 'form-control-label' %>
+        <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="row">
+        <%= form.label :body, class: 'form-control-label' %>
+        <%= form.text_area :body, class: 'form-control ' %>
+    </div>
+
+    <div class="row">
+        <%= form.label :images, class: 'form-control-label' %>
+        <%= form.file_field :images, class: 'form-control' %>
+    </div>
+
+    <%= form.submit 'Submit' %>
+<% end %>
