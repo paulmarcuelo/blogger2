@@ -22,6 +22,12 @@
     </div>
 </h4>
 
+<div>
+    <% (0...@article.images.count).each do |image| %>
+        <%= image_tag(@article.thumbnail(image)) %>
+    <% end %>
+</div>
+
 <h3>
     <%= @article.body %>
 </h3>

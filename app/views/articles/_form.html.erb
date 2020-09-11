@@ -17,7 +17,7 @@
 
     <div class="row">
         <%= form.label :images, class: 'form-control-label' %>
-        <%= form.file_field :images, class: 'form-control' %>
+        <%= form.file_field :images, multiple: true, class: 'form-control' %>
     </div>
 
     <%= form.submit 'Submit' %>
