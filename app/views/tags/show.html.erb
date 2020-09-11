@@ -1,9 +1,12 @@
 <h1><%= @tag.name %></h1>
-<h4>
-    <%= link_to "Delete Tag", tag_path(@tag),
-            method: :delete,
-            data: {confirm: 'Are you sure you want to delete this tag?'} %>
-</h4>
+
+<% if logged_in? %>
+    <h4>
+        <%= link_to "Delete Tag", tag_path(@tag),
+                method: :delete,
+                data: {confirm: 'Are you sure you want to delete this tag?'} %>
+    </h4>
+<% end %>
 
 <hr>
 

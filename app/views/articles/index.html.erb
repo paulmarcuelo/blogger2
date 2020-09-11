@@ -1,6 +1,9 @@
 <h1>Index Page</h1>
-<h4> <%= link_to "Create New Article", new_article_path %> </h4>
+<% if logged_in? %>
+    <h4> <%= link_to "Create New Article", new_article_path %> </h4>
+<% end %>
 <h4> <%= link_to "All Tags", tags_path %> </h4>
+<h4> <%= link_to "All Authors", authors_path %> </h4>
 
 <hr>
 
