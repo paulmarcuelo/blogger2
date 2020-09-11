@@ -1,0 +1,15 @@
+<h1>ALL TAGS</h1>
+
+<h4>
+    <%= link_to "All Articles", articles_path %>
+</h4>
+
+<hr>
+
+<ul class="list-group list-group-flush">
+    <% @tags.each do |tag| %>
+        <li class="list-group-item">
+            <%= link_to tag.name, tag_path(tag) %>
+        </li>
+    <% end %>
+</ul>

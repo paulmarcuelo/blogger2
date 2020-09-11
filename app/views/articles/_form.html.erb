@@ -16,6 +16,11 @@
     </div>
 
     <div class="row">
+        <%= form.label :tag_list, class: 'form-control-label' %>
+        <%= form.text_field :tag_list, class: 'form-control' %>
+    </div>
+
+    <div class="row">
         <%= form.label :images, class: 'form-control-label' %>
         <%= form.file_field :images, multiple: true, class: 'form-control' %>
     </div>

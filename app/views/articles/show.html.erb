@@ -8,6 +8,13 @@
     <%= link_to "Go Back to Articles List", articles_path %>
 </h4>
 
+<p>
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+  <% end %>
+</p>
+
 <hr>
 <h4>
     <div class="row">
