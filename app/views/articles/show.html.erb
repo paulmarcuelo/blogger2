@@ -31,3 +31,9 @@
 <h3>
     <%= @article.body %>
 </h3>
+
+<hr>
+<h3>Comments</h3>
+<%= render partial: 'comments/form' %>
+<hr>
+<%= render partial: 'articles/comment', collection: @article.comments %>

@@ -8,6 +8,9 @@ class Article < ApplicationRecord
     #Article Relationship to Active Storage for Image
     has_many_attached :images, dependent: :destroy
 
+    #Article Relationship to Comments
+    has_many :comments, dependent: :destroy
+
     #Image Sizes
     def thumbnail input
         return self.images[input].variant(resize: "300x300!").processed        
